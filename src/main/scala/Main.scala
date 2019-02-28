@@ -27,7 +27,7 @@ object Main {
     val sumAvg = filteredList.map(_.hp).sum / filteredList.length
     val carListGreaterThanAvg = filteredList.filter(_.hp > sumAvg).sortWith(_.hp > _.hp)
 
-    if(carListGreaterThanAvg.isEmpty) {
+    if(carListGreaterThanAvg.isEmpty || N == 0) {
       println("Data Not Found")
     } else {
       var (i, j) = (0, 1)
